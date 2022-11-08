@@ -1,0 +1,31 @@
+
+
+.input{
+    width: 30%;
+    border-radius: 2rem;
+    border: 2px solid rgb(185, 185, 243);
+    padding: 10px;
+    box-shadow: 1px 3px  9px rgba($color: #000000, $alpha: 0.25);
+    transition: .5s;
+    &:focus{
+        outline: none;
+        transition: .5s;
+        box-shadow: 10px 8px  15px rgba($color: #000000, $alpha: 0.25);
+    }
+    
+}
+
+
+
+.btn{
+    margin-left: 1rem;
+    padding: .5rem;
+    border-radius: 3rem;
+   
+}
+.btn:hover{
+    box-shadow: 1px 3px  9px rgba($color: #000000, $alpha: 0.25);
+}
+
+
+
