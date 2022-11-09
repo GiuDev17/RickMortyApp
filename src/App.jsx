@@ -10,6 +10,7 @@ import Search from './components/Search/Search'
 import NavBar from './components/NavBar/NavBar'
 import Episodes from './Pages/Episodes'
 import Location from './Pages/Location'
+import CardDetails from './components/Cards/CardDetails'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -22,9 +23,14 @@ function App(){
       </div>
 
       <Routes>
-         <Route path='/' element={<Home />}/>
-         <Route path='/episodes' element={<Episodes />}/>
-         <Route path='/location' element={<Location />}/>
+         <Route path="/" element={<Home />}/>
+         <Route path="/:id" element={<CardDetails />}/>
+
+         <Route path="/episodes" element={<Episodes />}/>
+         <Route path="/episodes/:id" element={<CardDetails />}/>
+
+         <Route path="/location" element={<Location />}/>
+         <Route path="/location/:id" element={<CardDetails />}/>
       </Routes>
     </Router>
   )
@@ -60,7 +66,7 @@ const Home = () => {
   return (
     <div className="App">
        
-       
+       <h1 className='titl text-center fs-2'>Rick & Morty <span className='fw-bold d-flex justify-content-center fs-1'>Characters</span></h1>
        <Search setPageNumber={setPageNumber} setSearch={setSearch}/>
        
        <Pagination info={info} setPageNumber = {setPageNumber}/>
@@ -73,9 +79,9 @@ const Home = () => {
                   setStatus={setStatus} 
                   setPageNumber={setPageNumber}
           />
-          <div className="col-8">
+          <div className="col-lg-8 col-12">
             <div className="row">
-              <Cards results = {results}/>
+              <Cards page='/' results = {results}/>
               
               
               

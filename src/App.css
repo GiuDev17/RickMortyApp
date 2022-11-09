@@ -1,11 +1,17 @@
 
 
 .title{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Rubik Bubbles', cursive;
+  
 }
 
 .active{
   border-bottom: 2px solid grey;
   font-weight: bold;
   color: black;
+}
+
+.titl{
+  font-family: 'Poor Story', cursive;
+  
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Cards.module.scss'
 
 
 
 
-const Cards = ({results}) => {
+const Cards = ({results, page}) => {
     console.log(results)
    let display
    
@@ -13,19 +14,26 @@ const Cards = ({results}) => {
     display = results.map((x) => {
         let {id, name, image, location, status, gender} = x
 
-        return (<div key={id} className= 'col-4 mb-4 position-relative'>
+        return (
+        <Link 
+                style={{textDecoration: 'none'}}
+                to = {`${page}${id}`}
+                key={id} 
+                className= 'col-lg-4 col-md-6 col-12 mb-4 position-relative text-dark'    
+                >
 
-                <div className={styles.cards}>
+                <div className={`${styles.cards} d-flex flex-column justify-content-center`}>
                  <div className="im1">
                     <img src={image} className= {`img-fluid`} alt=""/>
                  </div>
 
                  <div className= {styles.content}>
-                    <div className='fs-4 fw-bold mb-3'>{name}</div>
+                    <div className='nam  fs-4 fw-bold mb-3'><h2>{name}</h2></div>
 
                     <div className=''>
                       <div className='fs-6'><span className='fw-bold'>Gender: </span>{gender}</div>
                       <div className='fs-6'><span className='fw-bold'>Last Location:</span> {location.name} </div>
+                      
                       
                     </div>
 
@@ -56,7 +64,7 @@ const Cards = ({results}) => {
 
                  
                 </div> 
-                </div>
+                </Link>
         )
     })
 

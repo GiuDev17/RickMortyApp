@@ -15,25 +15,19 @@ const Filters = ({setStatus, setPageNumber, setGender, setSpecies}) => {
 
 
   return (
-    <div className='col-3'>
+    <div className='col-lg-3 col-12 mb-4'>
         <div className="text-center fw-bold fs-1 mb-4">Filters</div>
 
         <div
            onClick={clear}
-           style= {{cursor: 'pointer', background:'#B8BCA8', color:'#18121E'}} 
-           className="text-center mb-3 fw-bold">Clear Filters</div>
+           style= {{cursor: 'pointer', color:'black', }}
+           className="badge bg-primary d-flex justify-content-center mb-3 fw-bold fs-5">Clear Filters</div>
 
         <div className="acordion" id="acordionExample">
           <Status setPageNumber={setPageNumber} setStatus={setStatus}/>
           <Species setPageNumber={setPageNumber} setSpecies={setSpecies}/>
           <Gender setPageNumber={setPageNumber} setGender={setGender}/>
         </div>
-
- 
-
-
-
- 
     </div>
   )
 }

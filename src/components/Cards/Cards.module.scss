@@ -1,7 +1,8 @@
 
 
 .cards{
-    background-color: beige;
+
+    background-color: rgb(190, 240, 157);
     border: 2px solid beige;
     padding: rem;
     text-align: left;
@@ -12,13 +13,19 @@
     box-shadow: 0 0 11px 2px rgb(209, 208, 208);
     
 }
+
 .cards:hover{
     transition: .5s;
     scale: 1.1;
     cursor: pointer;
-    background-color: rgb(240, 240, 174);
-    box-shadow: 0 0 11px 5px rgb(201, 198, 198);
+    background-color: rgb(159, 247, 101);
+    box-shadow: 0 0 11px 3px rgb(110, 108, 108);
 }
+.content * h2{
+    font-family: 'Poor Story', cursive;
+    font-size: 40px;
+}
+
 .cards * img{
     border-radius: 1rem 1rem 0 0;
 }
